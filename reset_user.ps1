@@ -10,7 +10,7 @@ function CreateUser {
   $Password = Read-Host -AsSecureString
   
   Write-Output "Creating new local user account."
-  New-LocalUser $Username -Password $Password -FullName $Username -Description "student user"
+  New-LocalUser $Username -Password $Password -FullName $Username -Description "student user" -AccountNeverExpires -PasswordNeverExpires -UserMayNotChangePassword 
 }
 
 # main routine
