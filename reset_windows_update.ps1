@@ -7,7 +7,7 @@ net stop cryptsvc
 net stop lanmanworkstation
 
 # remove all files form windows update cache
-rd / s/q c:\Windows\SoftwareDistribution
+rd /s /q c:\Windows\SoftwareDistribution
 
 # start services
 net net start lanmanworkstation
