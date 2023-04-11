@@ -6,7 +6,8 @@ choco install -y firefox google-chrome-x64 notepadplusplus adobereader putty zoo
 
 # active windows update service
 Set-Service -Name wuauserv -StartupType Automatic
+Set-Service -Name UsoSvc -StartupType Automatic
 
 # Install all windows updates
-wuauclt /detectnow
-wuauclt /updatenow
+UsoClient.exe StartScan
+UsoClient.exe StartInstall
