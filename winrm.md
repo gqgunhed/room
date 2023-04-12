@@ -15,6 +15,9 @@ Enable-PSRemoting -SkipNetworkProfileCheck -Force
 # Allow Admin Access to client PCs on ADMIN-Workstation
 # change "*" to desired IP-Range
 Set-Item WSMan:\localhost\Client\TrustedHosts -Value "*" -Force
+
+# check values
+Get-Item WSMan:\localhost\Client\TrustedHosts
 ```
 
 # Ansible for WinRM
