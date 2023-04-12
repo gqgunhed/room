@@ -12,6 +12,11 @@
 
 # Ansible for WinRM
   - https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html
+  - https://www.ansible.com/for/windows
+  - https://docs.ansible.com/ansible/latest/os_guide/index.html#windows
+  - https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html
+  - https://docs.ansible.com/ansible/latest/collections/ansible/windows/index.html
 
 # Ansible for Windows
-  - https://geekflare.com/ansible-installation-windows/ - via cygwin
+  - https://geekflare.com/ansible-installation-windows/ - Installation via cygwin
+  - 
