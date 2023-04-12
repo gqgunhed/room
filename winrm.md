@@ -27,6 +27,7 @@ Get-Item WSMan:\localhost\Client\TrustedHosts
   - https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html
   - https://docs.ansible.com/ansible/latest/getting_started/index.html
   - https://docs.ansible.com/ansible/latest/collections/ansible/windows/index.html
+  - https://www.ansible.com/blog/connecting-to-a-windows-host
 
 # Ansible for Windows
   - https://geekflare.com/ansible-installation-windows/ - Installation via cygwin
