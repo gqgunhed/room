@@ -6,8 +6,12 @@
   - https://4sysops.com/archives/enabling-powershell-remoting-fails-due-to-public-network-connection-type/
  
  ```
- # must skip network check for ppublic network connections
- Enable-PSRemoting -SkipNetworkProfileCheck -Force
+# must skip network check for ppublic network connections
+Enable-PSRemoting -SkipNetworkProfileCheck -Force
+
+# Remotezugriff von xyz erlauben
+# see https://learn.microsoft.com/de-de/windows/win32/winrm/installation-and-configuration-for-windows-remote-management
+winrm set winrm/config/client '@{TrustedHosts ="[0:0:0:0:0:0:0:0]"}'
 ```
 
 # Ansible for WinRM
