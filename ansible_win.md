@@ -11,6 +11,7 @@
   * https://www.youtube.com/watch?v=ngzP3HCSDnM&list=PLGyQDXV5H0G0ed1IX4X7nnPwPH81WkJKo&pp=iAQB - Ansible Automation Platform
     * https://www.youtube.com/watch?v=xvhOgSrXk00 - Ansible Automation for Windows
   * https://www.youtube.com/watch?v=goclfp6a2IQ&list=PL2_OBreMn7FqZkvMYt6ATmgC0KAGGJNAN&pp=iAQB - Ansible 101
+  * https://www.youtube.com/watch?v=6Me0Id7GAxY - Ansible Chrashkurs, ccc.media
 
 # Setting up Ansible host for WinRM
 Install mandatory module: `pip install pywinrm`
