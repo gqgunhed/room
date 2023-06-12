@@ -1,0 +1,14 @@
+- name: Delete student account
+  ansible.windows.win_user:
+    name: student
+    state: absent
+
+- name: Create student account
+  ansible.windows.win_user:
+    name: student
+    description: Student Account
+    state: present
+    password: password
+    groups:
+      - Benutzer
+    password_never_expires: true
