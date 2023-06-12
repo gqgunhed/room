@@ -1,0 +1,6 @@
+- name: Complete windows machine setup and customization
+  hosts: windows
+
+  tasks:
+    - include: tasks/win_choco.yml
+    - include: tasks/win_updates_install.yml
