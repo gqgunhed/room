@@ -1,3 +1,5 @@
+# see https://docs.ansible.com/ansible/latest/collections/chocolatey/chocolatey/win_chocolatey_module.html
+
 - name: Ensure Chocolatey itself is installed, using community repo for the bootstrap
   win_chocolatey:
     name: chocolatey
@@ -9,3 +11,12 @@
   win_chocolatey:
     name: choco-upgrade-all-at-startup
     state: present
+
+- name: Install multiple packages sequentially
+  win_chocolatey:
+    name: '{{ item }}'
+    state: present
+  loop:
+  - procexp
+  - putty
+  - windirstat
