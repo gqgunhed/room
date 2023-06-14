@@ -5,7 +5,7 @@
     name: chocolatey
 
 - name: Deactivate choco install prompt
-  ansible.windows.win_shell: choco feature enable -n allowGlobalConfirmation
+  win_shell: choco feature enable -n allowGlobalConfirmation
 
 - name: Activate automatic choco upgrade all
   win_chocolatey:
