@@ -8,7 +8,7 @@
 
 - name: Set DNS servers to use
   win_dns_client:
-    adapter_names: '*'
-    dns_servers:
+    adapter_names: 'Ethernet-Adapter Ethernet:'
+    ipv4_addresses:
     - 94.140.14.14
     - 94.140.15.15
