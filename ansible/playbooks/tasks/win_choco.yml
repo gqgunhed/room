@@ -27,6 +27,7 @@
   - zoom
   - vmware-horizon-client
   - teamviewer.host
+  - bginfo
 
 - name: Uninstall multiple packages sequentially
   win_chocolatey:
