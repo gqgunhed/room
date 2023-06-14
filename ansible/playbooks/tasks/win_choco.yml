@@ -20,3 +20,17 @@
   - procexp
   - putty
   - windirstat
+  - firefox
+  - google-chrome-x64
+  - notepadplusplus
+  - adobereader
+  - zoom
+  - vmware-horizon-client
+  - teamviewer.host
+
+- name: Uninstall multiple packages sequentially
+  win_chocolatey:
+    name: '{{ item }}'
+    state: absent
+  loop:
+  - skype
