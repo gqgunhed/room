@@ -1,0 +1,9 @@
+- name: Create student account
+  ansible.windows.win_user:
+    name: {{ student_user }}
+    description: Student Account
+    state: present
+    password: {{ student_pass }}
+    groups:
+      - {{ student_groups }}
+    password_never_expires: true
