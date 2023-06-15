@@ -5,12 +5,15 @@
     * https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
 
 ## YouTube
-  * Youtube Tutorial
-    * https://www.youtube.com/watch?v=aPN18jLRkJI - Learn How to Use Ansible to Manage Windows Servers (winrm) - Step by Step Guide
-    * https://gist.github.com/dmccuk/c39f560feec55fdbbaf5a17c3c52a431#file-ansible_manage_windows_servers_using_winrm-md
-  * https://www.youtube.com/watch?v=ngzP3HCSDnM&list=PLGyQDXV5H0G0ed1IX4X7nnPwPH81WkJKo&pp=iAQB - Ansible Automation Platform
+### Learn How to Use Ansible to Manage Windows Servers (winrm) - Step by Step Guide
+  * https://gist.github.com/dmccuk/c39f560feec55fdbbaf5a17c3c52a431#file-ansible_manage_windows_servers_using_winrm-md
+  * https://www.youtube.com/watch?v=aPN18jLRkJI
+### Ansible Automation Platform
+  * Playlist https://www.youtube.com/watch?v=ngzP3HCSDnM&list=PLGyQDXV5H0G0ed1IX4X7nnPwPH81WkJKo&pp=iAQB - 
     * https://www.youtube.com/watch?v=xvhOgSrXk00 - Ansible Automation for Windows
-  * https://www.youtube.com/watch?v=goclfp6a2IQ&list=PL2_OBreMn7FqZkvMYt6ATmgC0KAGGJNAN&pp=iAQB - Ansible 101
+### Ansible 101
+  * Playlist https://www.youtube.com/watch?v=goclfp6a2IQ&list=PL2_OBreMn7FqZkvMYt6ATmgC0KAGGJNAN&pp=iAQB - 
+### Andere Videos
   * https://www.youtube.com/watch?v=6Me0Id7GAxY - Ansible Chrashkurs, ccc.media
 
 # Setting up Ansible host for WinRM
