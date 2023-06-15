@@ -1,11 +1,14 @@
-# see https://docs.ansible.com/ansible/latest/collections/chocolatey/chocolatey/win_chocolatey_module.html
+# https://docs.ansible.com/ansible/latest/collections/chocolatey/chocolatey/win_chocolatey_module.html
+# https://docs.ansible.com/ansible/2.9/modules/win_chocolatey_feature_module.html#win-chocolatey-feature-module
 
 - name: Ensure Chocolatey itself is installed, using community repo for the bootstrap
   win_chocolatey:
     name: chocolatey
 
 - name: Deactivate choco install prompt
-  win_shell: choco feature enable -n allowGlobalConfirmation
+  win_chocolatey_feature:
+    name: allowGlobalConfirmation
+    state: enabled
 
 - name: Activate automatic choco upgrade all
   win_chocolatey:
