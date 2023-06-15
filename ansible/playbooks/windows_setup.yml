@@ -9,8 +9,11 @@
     - include: tasks/win_dns.yml
     - include: tasks/win_powerplan.yml
     - include: tasks/win_firewall.yml
+    - include: tasks/win_disable_newuser_oobe.yml
     # install software
     - include: tasks/win_choco.yml
+    - include: tasks/win_choco_update_all.yml
+    - include: tasks/win_choco_software_packages.yml
     # windows updates
     - include: tasks/win_update_service.yml
     - include: tasks/win_updates_install.yml
