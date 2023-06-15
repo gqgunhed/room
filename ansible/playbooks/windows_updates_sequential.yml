@@ -3,4 +3,4 @@
   serial: 1
   
   tasks:
-    - include: tasks/windows_updates_install.yml
+    - include: tasks/win_updates_install.yml
