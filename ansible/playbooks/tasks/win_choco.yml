@@ -4,8 +4,13 @@
   win_chocolatey:
     name: chocolatey
 
+- name: Update all installed choco packages
+  win_chocolatey:
+    name: all
+    state: latest
+
 - name: Deactivate choco install prompt
-  ansible.windows.win_shell: choco feature enable -n allowGlobalConfirmation
+  win_shell: choco feature enable -n allowGlobalConfirmation
 
 - name: Activate automatic choco upgrade all
   win_chocolatey:
@@ -20,3 +25,18 @@
   - procexp
   - putty
   - windirstat
+  - firefox
+  - google-chrome-x64
+  - notepadplusplus
+  - adobereader
+  - zoom
+  - vmware-horizon-client
+  - teamviewer.host
+  - bginfo
+
+- name: Uninstall multiple packages sequentially
+  win_chocolatey:
+    name: '{{ item }}'
+    state: absent
+  loop:
+  - skype
