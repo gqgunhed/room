@@ -1,3 +1,5 @@
+# https://docs.ansible.com/ansible/2.9/modules/win_package_module.html
+
 - name: Create student account
   win_user:
     name: "{{ student_user }}"
