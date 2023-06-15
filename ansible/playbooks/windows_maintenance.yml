@@ -5,3 +5,6 @@
   tasks:
     - include: tasks/win_clear_temp_files.yml
     - include: tasks/win_defrag.yml
+    # windows updates
+    - include: tasks/win_update_service.yml
+    - include: tasks/win_updates_install.yml
