@@ -1,0 +1,3 @@
+ansible/playbooks/group_vars/*
+ansible/playbooks/hosts.*
+ansible/playbooks/inventory.*

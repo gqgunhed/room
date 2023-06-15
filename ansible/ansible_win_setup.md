@@ -3,6 +3,8 @@
   * Official Guide
     * https://www.ansible.com/blog/connecting-to-a-windows-host
     * https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
+  * Some good examples of a complete environment
+    * https://github.com/crombeen/ansible/tree/master/
 
 ## YouTube
 ### Learn How to Use Ansible to Manage Windows Servers (winrm) - Step by Step Guide

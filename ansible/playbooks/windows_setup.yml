@@ -10,6 +10,7 @@
     - include: tasks/win_powerplan.yml
     - include: tasks/win_firewall.yml
     - include: tasks/win_disable_newuser_oobe.yml
+    - include: tasks/win_student_create.yml
     # install software
     - include: tasks/win_choco.yml
     - include: tasks/win_choco_update_all.yml
