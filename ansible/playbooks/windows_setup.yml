@@ -7,9 +7,12 @@
     # system settings like localization
     - include: tasks/win_region.yml
     - include: tasks/win_timezone.yml
+    # network settings
     - include: tasks/win_dns.yml
-    - include: tasks/win_powerplan.yml
     - include: tasks/win_firewall.yml
+    - include: tasks/win_network_profile.yml
+    # other settings
+    - include: tasks/win_powerplan.yml
     - include: tasks/win_disable_newuser_oobe.yml
     - include: tasks/win_student_create.yml
     # install software
