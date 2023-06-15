@@ -1,4 +1,5 @@
 # https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/remove-localuser?view=powershell-5.1
+# https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/new-localuser?view=powershell-5.1
 
 function RemoveUser {
   Write-Output "Removing local user: $Username"
