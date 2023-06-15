@@ -1,0 +1,6 @@
+- name: Install Windows updates on all machines and reboot if needed
+  gather_facts: no
+  serial: 1
+  
+  tasks:
+    - include: tasks/windows_updates_install.yml
