@@ -11,27 +11,4 @@
   win_chocolatey:
     name: choco-upgrade-all-at-startup
     state: present
-
-- name: Install multiple packages sequentially
-  win_chocolatey:
-    name: '{{ item }}'
-    state: present
-  loop:
-  - procexp
-  - putty
-  - windirstat
-  - firefox
-  - google-chrome-x64
-  - notepadplusplus
-  - adobereader
-  - zoom
-  - vmware-horizon-client
-  - teamviewer.host
-  - bginfo
-
-- name: Uninstall multiple packages sequentially
-  win_chocolatey:
-    name: '{{ item }}'
-    state: absent
-  loop:
-  - skype
+    
