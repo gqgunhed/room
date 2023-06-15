@@ -1,0 +1,6 @@
+- name: Reset all student user accounts
+  hosts: windows
+  tasks:
+    - include: tasks/win_student_delete.yml
+    - include: tasks/win_student_user.yml
+ 

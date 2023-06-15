@@ -3,11 +3,3 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 # Install software packages
 choco install -y firefox google-chrome-x64 notepadplusplus adobereader putty zoom skype vmware-horizon-client teamviewer.host choco-upgrade-all-at-startup
-
-# active windows update service
-Set-Service -Name wuauserv -StartupType Automatic
-Set-Service -Name UsoSvc -StartupType Automatic
-
-# Install all windows updates
-UsoClient.exe StartScan
-UsoClient.exe StartInstall
