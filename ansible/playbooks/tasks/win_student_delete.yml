@@ -1,4 +1,4 @@
 - name: Delete student account
   win_user:
-    name: {{ student_user }}
+    name: "{{ student_user }}"
     state: absent
