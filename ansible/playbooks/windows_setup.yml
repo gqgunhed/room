@@ -10,7 +10,7 @@
     # network settings
     - include: tasks/win_dns.yml
     - include: tasks/win_firewall.yml
-    - include: tasks/win_network_profile.yml
+    #- include: tasks/win_network_profile.yml # does not work yet
     # other settings
     - include: tasks/win_powerplan.yml
     - include: tasks/win_disable_newuser_oobe.yml
