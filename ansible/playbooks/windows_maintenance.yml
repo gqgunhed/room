@@ -1,0 +1,7 @@
+- name: Playbook to do some maintenance on windows machines
+  hosts: windows
+  gather_facts: no
+  
+  tasks:
+    - include: tasks/win_clear_temp_files.yml
+    - include: tasks/win_defrag.yml
