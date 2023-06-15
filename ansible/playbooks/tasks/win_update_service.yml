@@ -1,0 +1,14 @@
+# Activate Windows update services
+# https://docs.ansible.com/ansible/2.9/modules/win_service_module.html#win-service-module
+
+- name: Activate wuau service
+  win_service:
+    name: wuauserv
+    start_mode: auto
+    state: started
+
+- name: Activate UsoSvc service
+  win_service:
+    name: UsoSvc
+    start_mode: auto
+    state: started
