@@ -1,7 +1,16 @@
 - name: Complete windows machine setup and customization
   hosts: windows
+  gather_facts: no
 
   tasks:
+    # system settings like localization
+    - include: tasks/win_region.yml
+    - include: tasks/win_timezone.yml
     - include: tasks/win_dns.yml
+    - include: tasks/win_powerplan.yml
+    - include: tasks/win_firewall.yml
+    # install software
     - include: tasks/win_choco.yml
+    # windows updates
+    - include: tasks/win_update_service.yml
     - include: tasks/win_updates_install.yml
