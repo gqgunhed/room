@@ -2,6 +2,7 @@
   hosts: windows
   gather_facts: no
   serial: 1
+  # will break if that single machine is unreachable
   ignore_errors: true
   
   tasks:
