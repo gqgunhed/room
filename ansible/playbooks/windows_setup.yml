@@ -1,6 +1,7 @@
 - name: Complete windows machine setup and customization
   hosts: windows
   gather_facts: no
+  serial: 3
 
   tasks:
     # system settings like localization
