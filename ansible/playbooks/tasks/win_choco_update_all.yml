@@ -1,0 +1,6 @@
+# https://docs.ansible.com/ansible/2.9/modules/win_chocolatey_module.html#win-chocolatey-module
+
+- name: Update all installed choco packages
+  win_chocolatey:
+    name: all
+    state: latest
