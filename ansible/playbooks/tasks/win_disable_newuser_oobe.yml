@@ -3,7 +3,7 @@
 
 - name: Disable OOBE questions via registry
   win_regedit:
-    path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
-    name: OOBE
+    path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\OOBE
+    name: DisablePrivacyExperience
     data: 1
     type: dword
