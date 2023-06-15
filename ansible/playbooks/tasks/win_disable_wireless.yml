@@ -1,0 +1,9 @@
+# https://learn.microsoft.com/en-us/powershell/module/netadapter/disable-netadapter?view=windowsserver2019-ps
+
+- name: Disable all wireless netowrk interfaces
+  win_shell: Disable-NetAdapter -Name 'Wi-Fi*' -Physical
+  ignore_errors: true
+  
+- name: Disable all wireless netowrk interfaces 2
+  win_shell: Disable-NetAdapter -Name 'Wireless*' -Physical
+  ignore_errors: true
