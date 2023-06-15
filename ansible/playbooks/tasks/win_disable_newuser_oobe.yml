@@ -1,0 +1,9 @@
+# from https://docs.ansible.com/ansible/2.9/modules/win_regedit_module.html#win-regedit-module
+# from https://www.tenforums.com/tutorials/118840-enable-disable-privacy-settings-experience-sign-windows-10-a.html
+
+- name: Disable OOBE questions via registry
+  win_regedit:
+    path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
+    name: OOBE
+    data: 1
+    type: dword
