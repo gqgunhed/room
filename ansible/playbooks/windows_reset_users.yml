@@ -2,5 +2,6 @@
   hosts: windows
   tasks:
     - include: tasks/win_student_delete.yml
-    - include: tasks/win_student_user.yml
+    - include: tasks/win_student_create.yml
+    - include: tasks/win_disable_newuser_oobe.yml
  

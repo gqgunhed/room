@@ -1,0 +1,7 @@
+# https://docs.ansible.com/ansible/2.9/modules/win_power_plan_module.html#win-power-plan-module
+#
+
+- name: Change power plan to balanced
+  win_power_plan:
+    name: balanced
+    # name: high performance

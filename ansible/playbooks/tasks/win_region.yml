@@ -1,0 +1,13 @@
+# https://docs.ansible.com/ansible/2.9/modules/win_region_module.html#win-region-module
+#
+# Reboot when format, location or unicode has changed
+- name: Set format, location and unicode to English Australia and copy settings, reboot if required
+  win_region:
+    location: 94
+    format: de-DE
+    unicode_language: de-DE
+    copy_settings: yes
+  register: result
+
+- win_reboot:
+  when: result.restart_required

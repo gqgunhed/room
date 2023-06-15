@@ -1,42 +1,17 @@
-# see https://docs.ansible.com/ansible/latest/collections/chocolatey/chocolatey/win_chocolatey_module.html
+# https://docs.ansible.com/ansible/latest/collections/chocolatey/chocolatey/win_chocolatey_module.html
+# https://docs.ansible.com/ansible/2.9/modules/win_chocolatey_feature_module.html#win-chocolatey-feature-module
 
 - name: Ensure Chocolatey itself is installed, using community repo for the bootstrap
   win_chocolatey:
     name: chocolatey
 
-- name: Update all installed choco packages
-  win_chocolatey:
-    name: all
-    state: latest
-
 - name: Deactivate choco install prompt
-  win_shell: choco feature enable -n allowGlobalConfirmation
+  win_chocolatey_feature:
+    name: allowGlobalConfirmation
+    state: enabled
 
 - name: Activate automatic choco upgrade all
   win_chocolatey:
     name: choco-upgrade-all-at-startup
     state: present
-
-- name: Install multiple packages sequentially
-  win_chocolatey:
-    name: '{{ item }}'
-    state: present
-  loop:
-  - procexp
-  - putty
-  - windirstat
-  - firefox
-  - google-chrome-x64
-  - notepadplusplus
-  - adobereader
-  - zoom
-  - vmware-horizon-client
-  - teamviewer.host
-  - bginfo
-
-- name: Uninstall multiple packages sequentially
-  win_chocolatey:
-    name: '{{ item }}'
-    state: absent
-  loop:
-  - skype
+    

@@ -1,0 +1,25 @@
+# https://docs.ansible.com/ansible/2.9/modules/win_chocolatey_module.html#win-chocolatey-module
+
+- name: Install multiple packages sequentially
+  win_chocolatey:
+    name: '{{ item }}'
+    state: present
+  loop:
+  - procexp
+  - putty
+  - windirstat
+  - firefox
+  - google-chrome-x64
+  - notepadplusplus
+  - adobereader
+  - zoom
+  - vmware-horizon-client
+  - teamviewer.host
+  - bginfo
+
+- name: Uninstall multiple packages sequentially
+  win_chocolatey:
+    name: '{{ item }}'
+    state: absent
+  loop:
+  - skype
