@@ -4,3 +4,5 @@
   win_chocolatey:
     name: all
     state: latest
+    # task will fail if no choco packages are installed (e.g. clean install)
+    ignore_errors: true
