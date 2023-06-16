@@ -2,7 +2,6 @@
 
 - name: Update all installed choco packages
   win_chocolatey:
+    # task will fail if no choco packages are installed (e.g. clean install)
     name: all
     state: latest
-    # task will fail if no choco packages are installed (e.g. clean install)
-    ignore_errors: true
