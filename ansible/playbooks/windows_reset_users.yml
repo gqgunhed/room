@@ -3,7 +3,7 @@
   gather_facts: no
   
   tasks:
-    - include: tasks/win_student_delete.yml
-    - include: tasks/win_student_create.yml
-    - include: tasks/win_disable_newuser_oobe.yml
+    - include_tasks: tasks/win_student_delete.yml
+    - include_tasks: tasks/win_student_create.yml
+    - include_tasks: tasks/win_disable_newuser_oobe.yml
  
