@@ -3,7 +3,7 @@
 - name: Create student account
   win_user:
     name: "{{ student_user }}"
-    full name: Student Account
+    fullname: Student Account
     description: Student Account
     state: present
     password: "{{ student_pass }}"
