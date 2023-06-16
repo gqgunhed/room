@@ -1,0 +1,5 @@
+# changes in windows security center
+
+- name: settings for app & browser protection
+  win_shell: Set-MpPreference -PUAProtection:1
+  
