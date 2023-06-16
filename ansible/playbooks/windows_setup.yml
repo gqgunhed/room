@@ -17,8 +17,8 @@
     - include_tasks: tasks/win_student_create.yml
     # install software
     - include_tasks: tasks/win_choco.yml
-    - include_tasks: tasks/win_choco_update_all.yml
     - include_tasks: tasks/win_choco_software_packages.yml
+    - include_tasks: tasks/win_choco_update_all.yml
     # windows updates
     - include_tasks: tasks/win_update_service.yml
     - include_tasks: tasks/win_updates_install.yml
