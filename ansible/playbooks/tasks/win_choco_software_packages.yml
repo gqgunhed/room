@@ -14,7 +14,6 @@
   - adobereader
   - zoom
   - vmware-horizon-client
-  - teamviewer.host
   - bginfo
 
 - name: Uninstall multiple packages sequentially
@@ -23,3 +22,4 @@
     state: absent
   loop:
   - skype
+  - teamviewer.host

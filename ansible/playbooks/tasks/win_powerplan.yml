@@ -3,5 +3,5 @@
 
 - name: Change power plan to balanced
   win_power_plan:
-    name: balanced
-    # name: high performance
+    name: Ausbalanciert
+    # name: Höchstleistung
