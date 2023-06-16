@@ -4,5 +4,5 @@
     # don't use '*' as it will set DNS for virtual adapters like VMware, too
     # Find adapter names: Get-NetAdapter -Name * -IncludeHidden
     # values from: group_vars/all/dns.yml
-    adapter_names: 'Ethernet'
-    ipv4_addresses: {{ dns_servers }}
+    adapter_names: "Ethernet"
+    ipv4_addresses: "{{ dns_servers }}"
