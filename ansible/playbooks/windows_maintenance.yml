@@ -4,10 +4,10 @@
   serial: 3
   
   tasks:
-    - include: tasks/win_clear_temp_files.yml
-    - include: tasks/win_choco_update_all.yml
+    - include_tasks: tasks/win_clear_temp_files.yml
+    - include_tasks: tasks/win_choco_update_all.yml
     # windows updates
-    - include: tasks/win_update_service.yml
-    - include: tasks/win_updates_install.yml
+    - include_tasks: tasks/win_update_service.yml
+    - include_tasks: tasks/win_updates_install.yml
     # defrag at the end
-    - include: tasks/win_defrag.yml
+    - include_tasks: tasks/win_defrag.yml
