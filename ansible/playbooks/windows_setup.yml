@@ -14,7 +14,7 @@
     # other settings
     - include_tasks: tasks/win_powerplan.yml
     - include_tasks: tasks/win_disable_newuser_oobe.yml
-    - include_tasks: tasks/win_student_create.yml
+    - include_tasks: tasks/win_user_create.yml
     # install software
     - include_tasks: tasks/win_choco.yml
     - include_tasks: tasks/win_choco_software_packages.yml
