@@ -1,6 +1,6 @@
 # https://docs.ansible.com/ansible/2.9/modules/win_package_module.html
 
-- name: Delete student account
+- name: Delete user account
   win_user:
-    name: "{{ student_user }}"
+    name: "{{ username }}"
     state: absent
