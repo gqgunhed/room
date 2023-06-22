@@ -1,14 +1,14 @@
 # https://docs.ansible.com/ansible/2.9/modules/win_package_module.html
 
-- name: Create student account
+- name: Create user account
   win_user:
-    name: "{{ student_user }}"
-    fullname: Student Account
-    description: Student Account
+    name: "{{ username }}"
+    fullname: User Account
+    description: User Account
     state: present
-    password: "{{ student_pass }}"
+    password: "{{ userpass }}"
     groups:
-      - "{{ student_groups }}"
+      - "{{ usergroups }}"
     password_expired: false
     password_never_expires: true
     account_disabled: false
