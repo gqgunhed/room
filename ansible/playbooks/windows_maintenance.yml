@@ -1,7 +1,7 @@
 - name: Playbook to do some maintenance on windows machines
   hosts: windows
   gather_facts: no
-  serial: 3
+  #serial: 3
   
   tasks:
     - include_tasks: tasks/win_clear_temp_files.yml
@@ -10,4 +10,4 @@
     - include_tasks: tasks/win_update_service.yml
     - include_tasks: tasks/win_updates_install.yml
     # defrag at the end
-    - include_tasks: tasks/win_defrag.yml
+    #- include_tasks: tasks/win_defrag.yml
