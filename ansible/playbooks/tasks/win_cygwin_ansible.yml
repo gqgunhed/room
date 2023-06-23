@@ -6,5 +6,5 @@
 
 - name: Install and update all packages
   # https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_shell_module.html
-  ansible.windows.win_shell: c:\Windows\Temp\cygwin_setup-x86_64.exe --quiet-mode --only-site --site https://ftp-stud.hs-esslingen.de/pub/Mirrors/sources.redhat.com/cygwin/ --upgrade-also --packages ansible
+  ansible.windows.win_shell: c:\Windows\Temp\cygwin_setup-x86_64.exe --quiet-mode --no-desktop --only-site --site https://ftp-stud.hs-esslingen.de/pub/Mirrors/sources.redhat.com/cygwin/ --upgrade-also --packages ansible
   
