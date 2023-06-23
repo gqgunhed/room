@@ -1,10 +1,10 @@
 - name: Download cygwin installer
   # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/get_url_module.html
-  ansible.builtin.get_url:
+  ansible.windows.win_get_url:
     url: https://www.cygwin.com/setup-x86_64.exe
     dest: c:\Windows\Temp\cygwin_setup-x86_64.exe
 
 - name: Install and update all packages
   # https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_shell_module.html
-  ansible.windows.shell: c:\Windows\Temp\cygwin_setup-x86_64.exe --quiet-mode --only-site --site https://ftp-stud.hs-esslingen.de/pub/Mirrors/sources.redhat.com/cygwin/ --upgrade-also --packages ansible
+  ansible.windows.win_shell: c:\Windows\Temp\cygwin_setup-x86_64.exe --quiet-mode --only-site --site https://ftp-stud.hs-esslingen.de/pub/Mirrors/sources.redhat.com/cygwin/ --upgrade-also --packages ansible
   
