@@ -1,4 +1,4 @@
-# https://docs.ansible.com/ansible/2.9/modules/win_file_module.html#win-file-module
+# https://docs.ansible.com/ansible/latest/modules/win_file_module.html
 
 - name: Remove directory structure
   win_file:
