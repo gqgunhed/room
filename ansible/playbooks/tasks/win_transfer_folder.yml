@@ -2,5 +2,5 @@
 
 - name: Copy {{ transfer_source }} to {{ transfer_target }} on Ansible target
   win_copy:
-    src: "{{ transfer_source }}"
-    dest: "{{ transfer_target }}"
+    src: "{{ transfer_source }}"/
+    dest: "{{ transfer_target }}"/
