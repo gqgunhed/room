@@ -1,8 +1,9 @@
-# https://docs.ansible.com/ansible/2.9/modules/win_chocolatey_module.html#win-chocolatey-module
+# https://docs.ansible.com/ansible/latest/modules/win_chocolatey_module.html#win-chocolatey-module
 
 - name: Install multiple packages sequentially
   win_chocolatey:
     name: '{{ item }}'
+    force: true
     state: present
   loop:
   - procexp

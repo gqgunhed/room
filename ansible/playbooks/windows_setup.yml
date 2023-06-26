@@ -5,20 +5,19 @@
 
   tasks:
     # system settings like localization
-    - include: tasks/win_region.yml
-    - include: tasks/win_timezone.yml
+    - include_tasks: tasks/win_region.yml
+    - include_tasks: tasks/win_timezone.yml
     # network settings
-    - include: tasks/win_dns.yml
-    - include: tasks/win_firewall.yml
+    - include_tasks: tasks/win_dns.yml
+    - include_tasks: tasks/win_firewall.yml
     #- include: tasks/win_network_profile.yml # does not work yet
     # other settings
-    - include: tasks/win_powerplan.yml
-    - include: tasks/win_disable_newuser_oobe.yml
-    - include: tasks/win_student_create.yml
+    - include_tasks: tasks/win_powerplan.yml
+    - include_tasks: tasks/win_disable_newuser_oobe.yml
+    - include_tasks: tasks/win_user_create.yml
     # install software
-    - include: tasks/win_choco.yml
-    - include: tasks/win_choco_update_all.yml
-    - include: tasks/win_choco_software_packages.yml
+    - include_tasks: tasks/win_choco.yml
+    - include_tasks: tasks/win_choco_software_packages.yml
     # windows updates
-    - include: tasks/win_update_service.yml
-    - include: tasks/win_updates_install.yml
+    - include_tasks: tasks/win_update_service.yml
+    - include_tasks: tasks/win_updates_install.yml

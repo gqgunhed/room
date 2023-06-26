@@ -1,16 +1,8 @@
-# see https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_dns_client_module.html#ansible-collections-ansible-windows-win-dns-client-module
-#
-# popular choices:
-# 8.8.8.8, 8.8.4.4 - Google
-# 1.1.1.1
-# 9.9.9.9
-# 94.140.14.14, 94.140.15.15 - AdGuard default servers (blocks ads and trackers), see https://adguard-dns.io/en/public-dns.html
 
 - name: Set DNS servers to use
   win_dns_client:
     # don't use '*' as it will set DNS for virtual adapters like VMware, too
     # Find adapter names: Get-NetAdapter -Name * -IncludeHidden
-    adapter_names: 'Ethernet'
-    ipv4_addresses:
-    - 94.140.14.14
-    - 94.140.15.15
+    # values from: group_vars/all/dns.yml
+    adapter_names: "Ethernet"
+    ipv4_addresses: "{{ dns_servers }}"

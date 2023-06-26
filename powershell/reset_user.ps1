@@ -8,11 +8,11 @@ function RemoveUser {
 
 function CreateUser {
   Write-Output "Creating new local user account."
-  New-LocalUser $Username -Password $Password -FullName $Username -Description "student user" -AccountNeverExpires:$true -PasswordNeverExpires:$true -UserMayNotChangePassword:$true 
+  New-LocalUser $Username -Password $Password -FullName $Username -Description "New User" -AccountNeverExpires:$true -PasswordNeverExpires:$true -UserMayNotChangePassword:$true 
 }
 
 # main routine
-$Username = "Student"
+$Username = "NewUser"
 Write-Output "Enter password for the new user $Username: "
 $Password = Read-Host -AsSecureString
   

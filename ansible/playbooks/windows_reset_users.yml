@@ -1,9 +1,9 @@
-- name: Reset all student user accounts
+- name: Reset all user accounts
   hosts: windows
   gather_facts: no
   
   tasks:
-    - include: tasks/win_student_delete.yml
-    - include: tasks/win_student_create.yml
-    - include: tasks/win_disable_newuser_oobe.yml
+    - include_tasks: tasks/win_user_delete.yml
+    - include_tasks: tasks/win_user_create.yml
+    - include_tasks: tasks/win_disable_newuser_oobe.yml
  

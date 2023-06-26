@@ -1,13 +1,16 @@
 - name: Playbook to do some maintenance on windows machines
   hosts: windows
   gather_facts: no
-  serial: 3
+  #serial: 3
+  ignore_errors: yes
   
   tasks:
-    - include: tasks/win_clear_temp_files.yml
-    - include: tasks/win_choco_update_all.yml
     # windows updates
-    - include: tasks/win_update_service.yml
-    - include: tasks/win_updates_install.yml
+    - include_tasks: tasks/win_update_service.yml
+    - include_tasks: tasks/win_updates_install.yml
+    # cleanup
+    - include_tasks: tasks/win_clear_temp_files.yml
+    # update all choco packages
+    - include_tasks: tasks/win_choco_update_all.yml
     # defrag at the end
-    - include: tasks/win_defrag.yml
+    #- include_tasks: tasks/win_defrag.yml

@@ -1,6 +1,11 @@
-# https://docs.ansible.com/ansible/2.9/modules/win_file_module.html#win-file-module
+# https://docs.ansible.com/ansible/latest/modules/win_file_module.html
 
 - name: Remove directory structure
   win_file:
-    path: C:\Temp\*
+    path: C:\Windows\Temp
     state: absent
+
+- name: Create directory structure
+  win_file:
+    path: C:\Windows\Temp
+    state: directory

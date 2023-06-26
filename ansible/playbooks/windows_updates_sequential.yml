@@ -6,4 +6,4 @@
   #ignore_errors: true
   
   tasks:
-    - include: tasks/win_updates_install.yml
+    - include_tasks: tasks/win_updates_install.yml

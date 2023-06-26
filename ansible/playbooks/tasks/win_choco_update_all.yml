@@ -2,5 +2,7 @@
 
 - name: Update all installed choco packages
   win_chocolatey:
+    # task will fail if no choco packages are installed (e.g. clean install)
     name: all
+    force: true
     state: latest
