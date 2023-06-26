@@ -2,12 +2,15 @@
   hosts: windows
   gather_facts: no
   #serial: 3
+  ignore_errors: yes
   
   tasks:
-    - include_tasks: tasks/win_clear_temp_files.yml
-    - include_tasks: tasks/win_choco_update_all.yml
     # windows updates
     - include_tasks: tasks/win_update_service.yml
     - include_tasks: tasks/win_updates_install.yml
+    # cleanup
+    - include_tasks: tasks/win_clear_temp_files.yml
+    # update all choco packages
+    - include_tasks: tasks/win_choco_update_all.yml
     # defrag at the end
     #- include_tasks: tasks/win_defrag.yml
