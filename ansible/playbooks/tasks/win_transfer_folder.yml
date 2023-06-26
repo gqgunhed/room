@@ -1,0 +1,6 @@
+# https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_copy_module.html
+
+- name: Copy {{ transfer_source }} to {{ transfer_target }} on Ansible target
+  win_copy:
+    src: "{{ transfer_source }}\/"
+    dest: "{{ transfer_target }}\/"

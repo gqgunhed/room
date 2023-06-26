@@ -1,0 +1,2 @@
+transfer_source: transfer_folder
+transfer_target: c:\ansible_transfer
