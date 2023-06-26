@@ -1,10 +1,10 @@
-# https://docs.ansible.com/ansible/2.9/modules/win_package_module.html
+# https://docs.ansible.com/ansible/latest/modules/win_package_module.html
 
 - name: Create user account
   win_user:
     name: "{{ username }}"
-    fullname: User Account
-    description: User Account
+    fullname: "{{ username }}"
+    description: "{{ username }}"
     state: present
     password: "{{ userpass }}"
     groups:
