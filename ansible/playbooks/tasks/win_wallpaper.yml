@@ -1,0 +1,27 @@
+# from https://docs.ansible.com/ansible/latest/modules/win_regedit_module.html#win-regedit-module
+# from https://www.thewindowsclub.com/set-desktop-wallpaper-using-group-policy-and-registry-editor
+# https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_copy_module.html
+
+- name: Ensure target dir is present
+  win_file:
+    path: c:\ansible_transfer
+    state: directory
+    
+- name: Push wallpaper file to client
+  win_copy:
+    source: ansible_transfer/"{{ wallpaper }}"
+    dest: c:\ansible_transfer\"{{ wallpaper }}"
+
+- name: Set wallpaper to file "{{ wallpaper }}"
+  win_regedit:
+    path: HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
+    name: Wallpaper
+    data: c:\ansible_transfer\"{{ wallpaper }}"
+    type: string
+
+- name: Set WallpaperStype to file "{{ wallpaper }}"
+  win_regedit:
+    path: HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
+    name: WallpaperStyle
+    data: "{{ wallpaperstyle }}"
+    type: string
