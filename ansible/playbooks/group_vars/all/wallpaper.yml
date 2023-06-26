@@ -1,5 +1,5 @@
 # https://www.thewindowsclub.com/set-desktop-wallpaper-using-group-policy-and-registry-editor
-wallpaper_file: c:\ansible_transfer\background.jpg
+wallpaper_file: c:\ansible_transfer\pexels-james-wheeler-417074.jpg
 wallpaper_type: 4
 # types:
 #    Center: 0
