@@ -24,7 +24,7 @@
     data: "{{ transfer_target }}\\{{ wallpaper }}"
     type: string
 
-- name: Set WallpaperStype to file "{{ wallpaper }}"
+- name: Set WallpaperStype to "{{ wallpaperstyle }}"
   win_regedit:
     path: HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
     name: WallpaperStyle
