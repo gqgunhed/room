@@ -14,14 +14,14 @@
     
 - name: Push wallpaper file to client
   win_copy:
-    source: "{{ transfer_source }}"/"{{ wallpaper }}"
-    dest: "{{ transfer_target }}"\"{{ wallpaper }}"
+    source: "{{ transfer_source }}/{{ wallpaper }}"
+    dest: "{{ transfer_target }}\{{ wallpaper }}"
 
 - name: Set wallpaper to file "{{ wallpaper }}"
   win_regedit:
     path: HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
     name: Wallpaper
-    data: "{{ transfer_target }}"\"{{ wallpaper }}"
+    data: "{{ transfer_target }}\{{ wallpaper }}"
     type: string
 
 - name: Set WallpaperStype to file "{{ wallpaper }}"
