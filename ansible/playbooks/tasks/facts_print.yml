@@ -1,0 +1,8 @@
+# from https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html
+#
+# To see the ‘raw’ information as gathered, run this command at the command line:
+#    ansible <hostname> -m ansible.builtin.setup
+
+- name: Print all available facts
+  ansible.builtin.debug:
+    var: ansible_facts
