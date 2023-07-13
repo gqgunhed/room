@@ -1,0 +1,10 @@
+# https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_domain_membership_module.html
+
+- name: Set Windows workgroup name to {{ workgroupname }}
+  win_domain_membership:
+      workgroup_name: "{{ workgroupname }}"
+      state: workgroup
+      register: result
+
+- win_reboot:
+  when: result.restart_required
