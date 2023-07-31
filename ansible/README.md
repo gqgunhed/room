@@ -82,4 +82,9 @@ ansible win -i inventory.ini -m win_ping -vvvv
 # -m win_ping = we have to use the WIN_ping module, not the regular (Linux) ping module!
 # -vvvv = be super verbose, just for debugging ;)
 ```
-If all works it's time to switch over to "[Getting started with Ansible](https://docs.ansible.com/ansible/latest/getting_started/index.html)" (official documentation).
+
+# Done!
+If all works it's time to switch over to 
+
+ * "[Getting started with Ansible](https://docs.ansible.com/ansible/latest/getting_started/index.html)" (official documentation)
+ * https://docs.ansible.com/ansible/latest/collections/ansible/windows/
