@@ -6,6 +6,7 @@
  * https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html
 
 ### HTTP (Easy)
+Run the following command as a user with admin privileges:
 ```
 winrm quickconfig
 ```
@@ -14,13 +15,9 @@ And the inventory on the server should look like [this](#httpinventory).
 ### HTTPS (needs script, not nice!)
 Downloads the PowerShell script from here and stores it in C:\Windows\Temp, then executes it. I had to store this script here, as it disappeared from Ansible dev :(
 
+ * [See my PS1 file](SetupAnsibleWindowsClient.ps1)
+
 *NEVER* trust some PowerShell script from the internet!
-```
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
-Invoke-WebRequest https://raw.githubusercontent.com/gqgunhed/room/main/ansible/ConfigureRemotingForAnsible.ps1 -Outfile c:\Windows\Temp\ConfigureRemotingForAnsible.ps1
-c:\Windows\Temp\ConfigureRemotingForAnsible.ps1
-Set-ExecutionPolicy -ExecutionPolicy Remotesigned -Force
-```
 
 ### Check the Listener
 ```
