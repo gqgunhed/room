@@ -10,7 +10,7 @@ Run the following command as a user with admin privileges:
 ```
 winrm quickconfig
 ```
-And the inventory on the server should look like [this](#httpinventory).
+Continue to [check the Listener](#checklistener).
 
 ### HTTPS (needs script, not nice!)
 Downloads the PowerShell script from here and stores it in C:\Windows\Temp, then executes it. I had to store this script here, as it disappeared from Ansible dev :(
@@ -18,8 +18,9 @@ Downloads the PowerShell script from here and stores it in C:\Windows\Temp, then
  * [See my PS1 file](SetupAnsibleWindowsClient.ps1)
 
 *NEVER* trust some PowerShell script from the internet!
+Continue to [check the Listener](#checklistener).
 
-### Check the Listener
+### <a name="checklistener"/>Check the Listener
 ```
 winrm enumerate winrm/config/Listener
 ```
@@ -28,6 +29,7 @@ To get an output of the current service configuration options, run the following
 winrm get winrm/config/Service
 winrm get winrm/config/Winrs
 ```
+Then use the corresponding [HTTP inventory](#httpinventory) or [HTTPS inventory](#httpsinventory) files bewlo.
 
 ## Ansible Host Setup
 [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html). If you choose to go with cygwin, see [Ansible on Windows with Cygwin](SetupAnsibleWindowsHost.md).
@@ -36,7 +38,7 @@ pip install pywinrm
 pip install cryptography
 ```
 
-### HTTP Inventory
+### <a name="httpinventory"/> HTTP Inventory
 See https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html for more details.
 
 inventory.ini
@@ -52,7 +54,7 @@ ansible_winrm_transport=ntlm   # to authenticate as local user, use "kerberos" f
 ansible_winrm_port=5985        # port is necessary
 ```
 
-### HTTPS Inventory
+###  <a name="httpsinventory"/> HTTPS Inventory
 See https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html for more details.
 
 inventory.ini
