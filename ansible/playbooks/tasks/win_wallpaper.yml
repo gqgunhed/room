@@ -25,6 +25,14 @@
     data: "{{ transfer_target }}\\{{ wallpaper }}"
     type: string
 
+- name: Set Registry Entry
+  win_regedit:
+    path: HKCU:\Control Panel\Desktop
+    name: Wallpaper
+    data: "{{ transfer_target }}\\{{ wallpaper }}"
+    type: string
+    state: present
+    
 - name: Set WallpaperStype to "{{ wallpaperstyle }}"
   win_regedit:
     path: HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
