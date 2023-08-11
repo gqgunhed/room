@@ -1,3 +1,4 @@
+---
 # from https://docs.ansible.com/ansible/latest/modules/win_regedit_module.html#win-regedit-module
 # from https://www.thewindowsclub.com/set-desktop-wallpaper-using-group-policy-and-registry-editor
 # https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_copy_module.html
