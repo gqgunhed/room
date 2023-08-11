@@ -1,3 +1,4 @@
+---
 # https://docs.ansible.com/ansible/2.9/modules/win_defrag_module.html#win-defrag-module
 #
 - name: Defragment all local volumes (in parallel)

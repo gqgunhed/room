@@ -1,3 +1,4 @@
+---
 # https://docs.ansible.com/ansible/2.9/modules/win_region_module.html#win-region-module
 #
 # Reboot when format, location or unicode has changed

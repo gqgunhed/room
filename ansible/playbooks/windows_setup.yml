@@ -1,3 +1,4 @@
+---
 - name: Complete windows machine setup and customization
   hosts: windows
   gather_facts: no

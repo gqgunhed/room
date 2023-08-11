@@ -1,3 +1,4 @@
+---
 # https://docs.ansible.com/ansible/latest/modules/win_chocolatey_module.html#win-chocolatey-module
 
 - name: Install multiple packages sequentially

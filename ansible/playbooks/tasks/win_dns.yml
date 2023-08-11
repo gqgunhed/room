@@ -1,4 +1,4 @@
-
+---
 - name: Set DNS servers to use
   win_dns_client:
     # don't use '*' as it will set DNS for virtual adapters like VMware, too
