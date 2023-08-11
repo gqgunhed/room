@@ -1,3 +1,4 @@
+---
 - name: Playbook to do some maintenance on windows machines
   hosts: windows
   gather_facts: no
