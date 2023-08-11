@@ -1,3 +1,4 @@
+---
 # from https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups
 # IMPORTANT: end all entries with ":" otherwise you'll have strange effects
 
