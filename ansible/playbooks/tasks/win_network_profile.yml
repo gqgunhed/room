@@ -1,2 +1,3 @@
+---
 - name: Set windows ethernet connection to "public" profile
   win_shell: Set-NetConnectionProfile -Name "Ethernet" -NetworkCategory "Public"
