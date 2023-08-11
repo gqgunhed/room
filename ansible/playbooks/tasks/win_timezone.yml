@@ -1,3 +1,4 @@
+---
 # win timezone https://docs.ansible.com/ansible/2.9/modules/win_timezone_module.html#win-timezone-module
 #
 - name: Set timezone to 'Western Europe Standard Time'
