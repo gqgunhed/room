@@ -41,6 +41,8 @@ pip install cryptography
 ### <a name="httpinventory"/> HTTP Inventory
 See https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html for more details.
 
+*Note: The variables should/could also be placed in an YAML file like 'group_vars/win/connection_details.yml'* instead of including them in the inventory file.
+
 inventory.ini
 ```
 [win]
@@ -56,6 +58,8 @@ ansible_winrm_port=5985        # port is necessary
 
 ###  <a name="httpsinventory"/> HTTPS Inventory
 See https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html for more details.
+
+*Note: The variables should/could also be placed in an YAML file like 'group_vars/win/connection_details.yml'* instead of including them in the inventory file.
 
 inventory.ini
 ```
@@ -73,7 +77,7 @@ ansible_winrm_server_cert_validation=ignore
 ```
 
 # Final test
-On the Ansible host now test if the Windows clients are reachable. We use a simple [ad hoc command](https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html) for this.
+From the Ansible host test if the Windows clients are reachable now. We use a simple [ad hoc command](https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html) for this.
 ```
 ansible win -i inventory.ini -m win_ping -vvvv
 
@@ -88,3 +92,4 @@ If all works it's time to switch over to
 
  * "[Getting started with Ansible](https://docs.ansible.com/ansible/latest/getting_started/index.html)" (official documentation)
  * https://docs.ansible.com/ansible/latest/collections/ansible/windows/
+ * https://docs.ansible.com/ansible/latest/tips_tricks/index.html
