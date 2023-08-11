@@ -1,3 +1,4 @@
+---
 - name: Install Windows updates on all machines and reboot if needed
   hosts: windows
   gather_facts: no
