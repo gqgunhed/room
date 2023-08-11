@@ -1,3 +1,5 @@
+---
+
 - name: Install cygwin and Ansible
   hosts: windows
   gather_facts: no
