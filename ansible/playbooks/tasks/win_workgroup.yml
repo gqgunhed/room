@@ -1,3 +1,4 @@
+---
 # https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_domain_membership_module.html
 
 - name: Set Windows workgroup name to {{ workgroupname }}
