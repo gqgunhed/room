@@ -1,3 +1,4 @@
+---
 - name: Reset all user accounts
   hosts: windows
   gather_facts: no
