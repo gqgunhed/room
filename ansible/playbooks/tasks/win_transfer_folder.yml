@@ -3,5 +3,6 @@
 
 - name: Copy {{ transfer_source }} to {{ transfer_target }} on Ansible target
   win_copy:
-    src: "{{ transfer_source }}\/"
-    dest: "{{ transfer_target }}\/"
+    # do not use a trailing slash if you want to copy a complete subfolder (with its content)
+    src: "{{ transfer_source }}"
+    dest: "{{ transfer_target }}"
